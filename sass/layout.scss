@@ -1,3 +1,43 @@
 *, ::after, ::before{
     box-sizing: border-box;
 }
+::placeholder{text-align: center;}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.show{
+    color: red; text-align: center;
+}
+.show::after{
+    content: ''; 
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: black;
+    
+}
+.text{
+    text-align: center; margin: 10px;
+input{
+    border: none; height: 60px; font-size: 1.5rem;
+}
+&:after{
+    content: ''; 
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);  
+}
+}
+*:focus{
+    outline: none;
+}
+
