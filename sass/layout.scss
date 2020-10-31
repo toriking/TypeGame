@@ -14,15 +14,22 @@ body{
 .back{
     width: 100%;
     height: 100%;
-    background-image: url(../images/mozi-1.png);
-    background-position: center center;
-    background-size: cover;
-    position: absolute;
+    // background-image: url(../images/mozi-1.png);
+    // background-position: center center;
+    // background-size: cover;
+    // position: absolute;
     z-index: -1;
+    color: red;
+}
+.count{
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .show{
     color: red; text-align: center;
 }
+
 .show::after{
     content: ''; 
     display: block;
