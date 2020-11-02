@@ -35,26 +35,29 @@ function check(){
         console.log('yy');
     }
 }
-
-const counttext = document.createElement('div');
-counttext.classList.add('count')
-back.appendChild(counttext);
-
+// div生成
+const scoreboard = document.createElement('div');
+scoreboard.classList.add('count')
+back.appendChild(scoreboard);
+// スコアボード設定
 let score= 0, quizset = 15;
-counttext.textContent =  score  + '/' + quizset ;
+scoreboard.textContent =  score  + '/' + quizset ;
 function count(){
-    
-    counttext.textContent = 1 + score  + '/' + quizset;
-     score++
+    // 1があることで0から始まらず1からカウントできる
+    scoreboard.textContent = 1 + score  + '/' + quizset;
+    score++
 }
 
 retext.addEventListener('click', ()=>{
     create()
 })
-enter.addEventListener('keydown',()=>{
-    if(e.keycode === 7){
+document.addEventListener('keydown',(e)=>{
+    if(e.key === 'Enter'){
         check();
     }
+    else{
+        console.log(e.key);
+        }
 })
 enter.addEventListener('click',()=>{
     check()
