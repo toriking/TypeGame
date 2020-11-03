@@ -52,12 +52,15 @@ retext.addEventListener('click', ()=>{
     create()
 })
 document.addEventListener('keydown',(e)=>{
+    var k = e.key
+    if(k <= 9 || k == 'a'){
+        text.value += k
+    }
+    
     if(e.key === 'Enter'){
         check();
     }
-    else{
-        console.log(e.key);
-        }
+
 })
 enter.addEventListener('click',()=>{
     check()
