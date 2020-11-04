@@ -53,9 +53,9 @@ retext.addEventListener('click', ()=>{
 })
 document.addEventListener('keydown',(e)=>{
     var k = e.key
-    if(k <= 9 || k == 'a'){
+    if(k <= 9 || k >='a'){
         text.value += k
-        
+
     }
     
     if(e.key === 'Enter'){
