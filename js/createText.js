@@ -53,13 +53,22 @@ retext.addEventListener('click', ()=>{
 })
 document.addEventListener('keydown',(e)=>{
     var k = e.key
+    
     if(k <= 9 || k >='a'){
         text.value += k
 
     }
-    
+    if(k=='Backspace'){
+       ree = text.value
+      re = ree.slice(0,-1)
+      text.value = re
+    console.log(re);
+    }
     if(e.key === 'Enter'){
         check();
+    }
+    if(e.ctrlKey){
+        console.log('tttt');
     }
 
 })
